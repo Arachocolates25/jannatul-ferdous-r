@@ -1,126 +1,1296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rayhan Gazi | Founder of Ara Chocolates, web creator and colour grader</title>
-  <meta name="description" content="Personal profile of Rayhan Gazi from Khulna, Bangladesh. Founder of Ara Chocolates, web creator, video editor and colour grader.">
-  <meta property="og:title" content="Rayhan Gazi">
-  <meta property="og:description" content="Founder of Ara Chocolates. Web creator and colour grader from Khulna, Bangladesh.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jannatul Ferdous — Co-Founder &amp; CEO, Ara Chocolates | Executive Portfolio</title>
+  <meta name="description" content="Official executive portfolio of Jannatul Ferdous — Admission Candidate and Co-Founder & CEO of Ara Chocolates. Based in Singair, Manikganj, Dhaka." />
+
+  <!-- Google Fonts: Inter (Primary UI & Headings), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#top">Rayhan Gazi</a>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav class="nav" id="nav" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design Tokens & Editorial White-Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: {
+              DEFAULT: '#FFFFFF',
+              raised: '#FAFAF9',
+              warm: '#FFFDF7',
+              subtle: '#F4F4F5'
+            },
+            ink: {
+              DEFAULT: '#111111',
+              secondary: '#52525B',
+              muted: '#71717A'
+            },
+            line: {
+              DEFAULT: '#E4E4E7',
+              strong: '#D4D4D8'
+            },
+            accent: {
+              DEFAULT: 'var(--accent-default, #2D6CDF)',
+              hover: 'var(--accent-hover, #1E4FBF)',
+              muted: 'var(--accent-muted, #EBF2FF)'
+            },
+            gold: {
+              DEFAULT: '#D97706',
+              light: '#FEF3C7',
+              border: '#FDE68A'
+            }
+          },
+          fontFamily: {
+            heading: ['"Inter"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          },
+          boxShadow: {
+            'subtle': '0 1px 2px 0 rgba(17, 17, 17, 0.03)',
+            'elevated': '0 12px 32px -8px rgba(17, 17, 17, 0.06), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            'modal': '0 24px 48px -12px rgba(17, 17, 17, 0.16)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --accent-default: #2D6CDF;
+      --accent-hover: #1E4FBF;
+      --accent-muted: #EBF2FF;
+    }
+    body {
+      background-color: #FFFFFF;
+      color: #111111;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection {
+      background-color: var(--accent-muted);
+      color: var(--accent-default);
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .bg-swiss-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(228, 228, 231, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(228, 228, 231, 0.45) 1px, transparent 1px);
+    }
+    .card-transition {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-transition:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-ink min-h-screen flex flex-col justify-between relative">
+
+  <!-- TOP EXECUTIVE STATUS & THEME BAR -->
+  <div class="bg-surface-raised border-b border-line text-xs py-2 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="font-semibold text-ink">Status:</span>
+        <span class="text-ink-secondary">Active for Ara Chocolates Operations, Brand Growth & Website Collaborations (10:00 AM – 4:00 PM)</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-ink-muted hidden sm:inline">White Theme Accent:</span>
+        <button onclick="setAccent('#2D6CDF', '#1E4FBF', '#EBF2FF')" title="Royal Slate Blue" class="w-3.5 h-3.5 rounded-full bg-[#2D6CDF] ring-2 ring-offset-1 ring-transparent hover:ring-ink/30 transition"></button>
+        <button onclick="setAccent('#111111', '#27272A', '#F4F4F5')" title="Pure Monochrome Black" class="w-3.5 h-3.5 rounded-full bg-[#111111] ring-2 ring-offset-1 ring-transparent hover:ring-ink/30 transition"></button>
+        <button onclick="setAccent('#D97706', '#B45309', '#FEF3C7')" title="Ara Artisan Gold" class="w-3.5 h-3.5 rounded-full bg-[#D97706] ring-2 ring-offset-1 ring-transparent hover:ring-ink/30 transition"></button>
+        <button onclick="setAccent('#0F766E', '#115E59', '#CCFBF1')" title="Deep Emerald Teal" class="w-3.5 h-3.5 rounded-full bg-[#0F766E] ring-2 ring-offset-1 ring-transparent hover:ring-ink/30 transition"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY MINIMALIST HEADER -->
+  <header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Brand Identity -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-ink text-surface flex items-center justify-center font-heading font-bold text-base tracking-tight group-hover:bg-accent transition-colors">
+          JF.
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-heading font-bold text-base text-ink tracking-tight">Jannatul Ferdous</span>
+            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20" title="Verified Co-Founder & CEO">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-[11px] font-mono text-ink-muted leading-none">Co-Founder &amp; CEO, Ara Chocolates</p>
+        </div>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-ink-secondary">
+        <a href="#about" class="hover:text-ink transition-colors">About Me</a>
+        <a href="#venture" class="hover:text-accent transition-colors font-semibold text-accent">Ara Chocolates</a>
+        <a href="#work" class="hover:text-ink transition-colors">Case Studies</a>
+        <a href="#collaborate" class="hover:text-ink transition-colors text-ink font-semibold">Work With Me</a>
+        <a href="#roadmap" class="hover:text-ink transition-colors">Business Roadmap</a>
+        <a href="#contact" class="hover:text-ink transition-colors">Contact</a>
       </nav>
+
+      <!-- High-Command Trigger Button (⌘K) & Website Link -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="openCommandModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-raised border border-line hover:border-line-strong text-xs font-medium text-ink-secondary hover:text-ink shadow-subtle transition-all">
+          <i class="fa-solid fa-terminal text-[11px] text-accent"></i>
+          <span>Command</span>
+          <kbd class="px-1.5 py-0.5 text-[11px] font-mono bg-surface border border-line rounded text-ink">⌘K</kbd>
+        </button>
+        <a href="https://arachocolates25.github.io/" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-ink hover:bg-accent text-surface text-xs font-medium transition-colors">
+          <i class="fa-solid fa-globe text-xs"></i>
+          <span>Website</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" class="flex-grow">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap">
-        <h1>Rayhan<br>Gazi</h1>
-        <p class="hero-lead">Founder of Ara Chocolates. I also build websites and colour grade film.</p>
-        <div class="btn-row">
-          <a class="btn" href="#contact">Contact me</a>
-          <a class="text-link" href="#work">See my work</a>
+    <!-- 1. EXECUTIVE HERO & MATURE PROFILE SECTION -->
+    <section class="relative bg-swiss-grid border-b border-line pt-12 pb-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Column: Positioning & Value Proposition (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-muted text-accent text-xs font-mono font-medium">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>SINGAIR, MANIKGANJ, DHAKA</span>
+            </div>
+
+            <h1 class="font-heading font-bold text-3xl sm:text-[42px] text-ink leading-[1.2] tracking-tight">
+              Combining creative entrepreneurship, technology, and knowledge to build <span class="text-accent underline decoration-accent/30 decoration-2 underline-offset-4">tomorrow's ventures and digital work</span>.
+            </h1>
+
+            <p class="text-base sm:text-lg text-ink-secondary leading-relaxed">
+              Hello, I am <strong>Jannatul Ferdous</strong>—Admission Candidate and Co-Founder &amp; CEO of <a href="#venture" class="text-[#2D6CDF] font-bold underline decoration-[#2D6CDF] decoration-2 underline-offset-4 hover:text-[#1E4FBF] transition">Ara Chocolates</a>. I lead brand strategy, artisan chocolate, custom packaging, and business growth. Collaborate with us on our website and projects.
+            </p>
+
+            <!-- Dynamic Typewriter Pill -->
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-ink-secondary bg-surface-raised border border-line px-3.5 py-2 rounded-lg w-fit">
+              <span class="text-accent font-bold">›</span>
+              <span id="typewriterText" class="font-medium text-ink">Co-Founder &amp; CEO at Ara Chocolates</span>
+              <span class="animate-pulse text-accent">|</span>
+            </div>
+
+            <!-- Primary CTA Cluster -->
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <a href="#collaborate" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-hover text-surface font-medium text-sm shadow-subtle transition-all">
+                <span>Work With Me</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#venture" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-surface hover:bg-surface-warm text-ink border border-line font-medium text-sm transition-all">
+                <span>🍫 Explore Ara Chocolates</span>
+              </a>
+              <button onclick="copyWebsiteLink()" class="inline-flex items-center gap-1.5 px-4 py-3 rounded-lg bg-surface-raised hover:bg-surface-subtle text-ink-secondary hover:text-ink border border-line text-xs font-mono transition-all">
+                <i class="fa-solid fa-link"></i>
+                <span id="copyWebBtnText">Copy Website Link</span>
+              </button>
+            </div>
+
+            <!-- Core Specialist Pillars -->
+            <div class="pt-4 border-t border-line flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink-muted font-mono">
+              <span>01 / ARA CHOCOLATES CEO</span>
+              <span>02 / BRAND & PACKAGING STRATEGY</span>
+              <span>03 / BUSINESS ROADMAP & GROWTH</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Mature Executive Profile Card with Live Photo Upload (5 cols) -->
+          <div class="lg:col-span-5">
+            <div class="bg-surface rounded-2xl border border-line p-6 shadow-elevated relative overflow-hidden">
+              <!-- Top Subtle Accent Bar -->
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-accent"></div>
+
+              <div class="flex items-start gap-4">
+                <!-- Interactive Profile Photo Container -->
+                <div class="relative group w-24 h-24 rounded-2xl bg-surface-raised border border-line flex-shrink-0 overflow-hidden flex items-center justify-center">
+                  <img id="profileImagePreview" src="profile.jpg" alt="Jannatul Ferdous Profile" class="w-full h-full object-cover" />
+                  <div id="profilePlaceholder" class="text-center p-2 hidden">
+                    <span class="font-heading font-bold text-2xl text-accent block">JF</span>
+                    <span class="text-[9px] font-mono text-ink-muted uppercase">Jannatul</span>
+                  </div>
+                  <label for="profileUploadInput" class="absolute inset-0 bg-ink/70 text-surface text-[10px] font-medium flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity text-center p-1">
+                    <i class="fa-solid fa-camera mb-1"></i>
+                    <span>Upload Photo</span>
+                  </label>
+                  <input type="file" id="profileUploadInput" accept="image/*" class="hidden" onchange="handleProfileImageUpload(event)" />
+                </div>
+
+                <div class="space-y-1">
+                  <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-raised border border-line text-[10px] font-mono text-ink-secondary">
+                    <span>EXECUTIVE PROFILE ID</span>
+                  </div>
+                  <h2 class="font-heading font-bold text-xl text-ink">Jannatul Ferdous</h2>
+                  <p class="text-xs text-ink-secondary">Admission Candidate · Co-Founder &amp; CEO</p>
+                  <p class="text-[11px] font-mono text-accent pt-0.5">● Active: Singair, Manikganj, Dhaka</p>
+                </div>
+              </div>
+
+              <!-- Profile Bio Snapshot -->
+              <div class="mt-5 pt-5 border-t border-line space-y-2.5 text-xs text-ink-secondary">
+                <div class="flex justify-between py-1 border-b border-line/60">
+                  <span class="text-ink-muted">Company:</span>
+                  <a href="#venture" class="font-bold text-[#2D6CDF] underline hover:text-[#1E4FBF]">Ara Chocolates (Co-Founder &amp; CEO)</a>
+                </div>
+                <div class="flex justify-between py-1 border-b border-line/60">
+                  <span class="text-ink-muted">Current Status:</span>
+                  <span class="font-medium text-ink">Admission Candidate &amp; Entrepreneur</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-line/60">
+                  <span class="text-ink-muted">Work Hours:</span>
+                  <span class="font-medium text-ink">10:00 AM – 4:00 PM</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-line/60">
+                  <span class="text-ink-muted">Strategic Focus:</span>
+                  <span class="font-medium text-ink">Artisan Chocolate &amp; Brand Growth</span>
+                </div>
+                <div class="flex justify-between py-1">
+                  <span class="text-ink-muted">Location:</span>
+                  <span class="font-medium text-ink">Singair, Manikganj, Dhaka</span>
+                </div>
+              </div>
+
+              <!-- Quick Profile Links -->
+              <div class="mt-5 pt-4 border-t border-line grid grid-cols-2 gap-2.5">
+                <a href="https://arachocolates25.github.io/" target="_blank" rel="noopener" id="profileWebsiteBtn" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-raised hover:bg-accent-muted hover:text-accent border border-line text-xs font-medium transition-colors">
+                  <i class="fa-solid fa-globe text-accent text-sm"></i>
+                  <span>Website Link</span>
+                </a>
+                <a href="https://www.instagram.com/janna_tul921?rpxt=dTQyZmxsOHpyM2E3" target="_blank" rel="noopener" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-raised hover:bg-accent-muted hover:text-accent border border-line text-xs font-medium transition-colors">
+                  <i class="fa-brands fa-instagram text-pink-600 text-sm"></i>
+                  <span>janna_tul921</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. QUANTITATIVE BUSINESS PROOF METRICS STRIP -->
+    <section class="bg-surface-raised border-b border-line py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div class="bg-surface p-4 rounded-xl border border-line shadow-subtle">
+            <a href="#venture" class="font-mono text-2xl sm:text-3xl font-bold text-[#2D6CDF] hover:underline block">Ara Chocolates</a>
+            <p class="text-xs text-ink-secondary mt-1">Co-Founder &amp; CEO · Artisan Dark Chocolate Brand</p>
+          </div>
+          <div class="bg-surface p-4 rounded-xl border border-line shadow-subtle">
+            <p class="font-mono text-2xl sm:text-3xl font-bold text-accent">10 AM – 4 PM</p>
+            <p class="text-xs text-ink-secondary mt-1">Dedicated Daily Executive Work &amp; Operations Hours</p>
+          </div>
+          <div class="bg-surface p-4 rounded-xl border border-line shadow-subtle">
+            <a href="#roadmap" class="font-mono text-2xl sm:text-3xl font-bold text-ink hover:text-accent transition block">Brand Roadmap</a>
+            <p class="text-xs text-ink-secondary mt-1">Ara Chocolates Multi-Phase Business Expansion Plan</p>
+          </div>
+          <div class="bg-surface p-4 rounded-xl border border-line shadow-subtle">
+            <p class="font-mono text-2xl sm:text-3xl font-bold text-ink">100% Artisan</p>
+            <p class="text-xs text-ink-secondary mt-1">Signature Dark Bars, Nut Infusions &amp; Custom Packaging</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT ME & EXECUTIVE BUSINESS FOCUS SECTION -->
+    <section id="about" class="py-16 sm:py-20 border-b border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- About Narrative (7 cols) -->
+          <div class="lg:col-span-7 space-y-4">
+            <p class="font-mono text-xs uppercase tracking-wider text-accent font-semibold">01 // ABOUT ME (EXECUTIVE IDENTITY &amp; LEADERSHIP)</p>
+            <h2 class="font-heading font-bold text-2xl sm:text-[32px] text-ink leading-tight">
+              Admission Candidate &amp; Co-Founder and CEO of <a href="#venture" class="text-[#2D6CDF] underline decoration-[#2D6CDF] decoration-2 underline-offset-4 hover:text-[#1E4FBF] transition">Ara Chocolates</a>.
+            </h2>
+            <p class="text-ink-secondary text-base leading-relaxed">
+              I am <strong>Jannatul Ferdous</strong>, an <strong>Admission Candidate</strong> and <strong>Co-Founder &amp; CEO</strong> of <a href="#venture" class="text-[#2D6CDF] font-semibold underline hover:text-[#1E4FBF] transition">Ara Chocolates</a>. From Singair, Manikganj, Dhaka, I lead strategy, product innovation, and brand identity.
+            </p>
+            <p class="text-ink-secondary text-base leading-relaxed">
+              At <a href="#venture" class="text-[#2D6CDF] font-semibold underline hover:text-[#1E4FBF] transition">Ara Chocolates</a>, we craft world-class dark chocolate with precision tempering, dry nut infusions, and bespoke packaging. From <strong>10:00 AM to 4:00 PM</strong>, I oversee quality, roadmap execution, and brand partnerships.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-surface-raised border border-line text-xs font-medium text-ink">🎯 Admission Candidate</span>
+              <a href="#venture" class="px-3 py-1 rounded-full bg-[#EBF2FF] border border-[#2D6CDF]/30 text-xs font-semibold text-[#2D6CDF] hover:bg-[#2D6CDF] hover:text-white transition">🍫 Co-Founder &amp; CEO, Ara Chocolates ↗</a>
+              <span class="px-3 py-1 rounded-full bg-surface-raised border border-line text-xs font-medium text-ink">🕙 Work Hours: 10:00 AM – 4:00 PM</span>
+            </div>
+          </div>
+
+          <!-- "Now" Live Business Status Box (5 cols) -->
+          <div class="lg:col-span-5">
+            <div class="bg-surface-warm rounded-2xl border border-line p-6 space-y-4 shadow-subtle">
+              <div class="flex items-center justify-between border-b border-line pb-3">
+                <span class="font-heading font-bold text-base text-ink">📍 Executive Priorities (Now)</span>
+                <span class="font-mono text-xs text-accent font-semibold">BUSINESS FOCUS</span>
+              </div>
+              <ul class="space-y-3.5 text-sm text-ink-secondary">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent font-mono font-bold mt-0.5">01</span>
+                  <span><strong><a href="#venture" class="text-[#2D6CDF] underline font-semibold">Ara Chocolates</a> Leadership:</strong> Directing product formulation for signature dark chocolate bars, dry nut infusions, custom packaging variants, and BSTI quality compliance.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent font-mono font-bold mt-0.5">02</span>
+                  <span><strong>Business Roadmap Execution:</strong> Scaling production, corporate gifting lines, and nationwide delivery operations from Manikganj, Dhaka.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent font-mono font-bold mt-0.5">03</span>
+                  <span><strong>Structured Operations (10 AM – 4 PM):</strong> Managing daily brand workflows, customer inquiries, and onboarding creative collaborators for our website and product lines.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FLAGSHIP VENTURE SHOWCASE: ARA CHOCOLATES -->
+    <section id="venture" class="py-16 sm:py-20 bg-surface-warm border-b border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-light border border-gold-border text-gold text-xs font-mono font-semibold mb-2">
+              <i class="fa-solid fa-crown"></i> FLAGSHIP COMPANY · CO-FOUNDER &amp; CEO
+            </span>
+            <h2 class="font-heading font-bold text-2xl sm:text-[32px] text-ink">
+              <span class="text-[#2D6CDF]">Ara Chocolates</span> — Artisan Dark Chocolate &amp; Premium Craft
+            </h2>
+          </div>
+          <!-- Interactive Venture Tabs -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="switchAraTab('bars')" id="araBtn-bars" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-ink text-surface transition">Signature Dark Bars</button>
+            <button onclick="switchAraTab('nuts')" id="araBtn-nuts" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-surface border border-line text-ink-secondary hover:text-ink transition">Dry Nut Infusions</button>
+            <button onclick="switchAraTab('pack')" id="araBtn-pack" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-surface border border-line text-ink-secondary hover:text-ink transition">Tempering &amp; Packaging</button>
+          </div>
         </div>
 
-        <dl class="bar">
-          <div class="sq"><dt>From</dt><dd>Khulna, Bangladesh</dd></div>
-          <div class="sq"><dt>Founder</dt><dd>Ara Chocolates</dd></div>
-          <div class="sq"><dt>Studying</dt><dd>ICT, web design and business</dd></div>
-          <div class="sq sq-hot"><dt>Status</dt><dd>Open to collaborations</dd></div>
-        </dl>
-      </div>
-    </section>
+        <!-- Ara Chocolates Dynamic Showcase Box -->
+        <div class="bg-surface rounded-2xl border border-line p-6 sm:p-8 shadow-elevated grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4" id="araTabContent">
+            <div class="inline-flex items-center gap-2 text-xs font-mono text-gold font-semibold">
+              <span>PRODUCT LINE 01 // ARTISAN DARK CHOCOLATE</span>
+            </div>
+            <h3 class="font-heading font-bold text-2xl text-ink" id="araTitle">
+              Signature Artisan Dark Chocolate Bars
+            </h3>
+            <p class="text-ink-secondary text-sm sm:text-base leading-relaxed" id="araDesc">
+              Ara Chocolates is an independent artisan chocolate company led by Co-Founder &amp; CEO Jannatul Ferdous. Utilizing precision chocolate tempering techniques, we deliver a glossy finish, a crisp snap, and an authentic rich cocoa flavor profile tailored for discerning chocolate lovers.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2" id="araHighlights">
+              <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                <p class="font-heading font-bold text-sm text-ink">Rich Cocoa Profile</p>
+                <p class="text-xs text-ink-secondary mt-0.5">Pure dark cocoa with balanced sweetness</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                <p class="font-heading font-bold text-sm text-ink">Precision Tempered</p>
+                <p class="text-xs text-ink-secondary mt-0.5">Silky texture and signature artisan snap</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                <p class="font-heading font-bold text-sm text-ink">Custom Gifting</p>
+                <p class="text-xs text-ink-secondary mt-0.5">Bespoke packaging for events &amp; gifting</p>
+              </div>
+            </div>
+          </div>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div class="photo">
-          <!-- To use your own photo: put a file named photo.jpg next to this file, then change the src below to "photo.jpg" -->
-          <img src="https://avatars.githubusercontent.com/u/328727512?v=4" alt="Portrait of Rayhan Gazi" width="280" height="280"
-               onerror="this.style.display='none';document.getElementById('initial').style.display='flex'">
-          <div class="initial" id="initial" aria-hidden="true">R</div>
+          <div class="lg:col-span-4 bg-surface-raised rounded-xl border border-line p-6 text-center space-y-4">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-light border border-gold-border flex items-center justify-center text-gold text-2xl">
+              <i class="fa-solid fa-cookie-bite"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-lg text-ink">Ara Chocolates Official</h4>
+              <p class="text-xs text-ink-secondary mt-1">
+                Place custom orders, explore retail partnerships, or connect with our brand page directly.
+              </p>
+            </div>
+            <button onclick="selectCollaborationMode('chocolate')" class="w-full py-2.5 px-4 rounded-xl bg-[#2D6CDF] hover:bg-[#1E4FBF] text-surface text-xs font-semibold transition">
+              Inquire About Ara Chocolates →
+            </button>
+          </div>
         </div>
-        <div class="prose">
-          <h2>About</h2>
-          <p class="lead">I'm a young entrepreneur and creator who likes to build things from scratch, and I learn most by doing the work myself.</p>
-          <p>I started with a chocolate brand, then moved into websites and cinematic video. Each one taught me the same lesson: small details decide whether something feels ordinary or well made.</p>
-          <p>My goal is to grow Ara Chocolates into a brand that Bangladesh remembers, and to keep making work that looks as good as it feels. In my free time I read about astrophysics, history and cars.</p>
+      </div>
+    </section>
+
+    <!-- 5. CASE-STUDY ARCHITECTURE & BUSINESS INITIATIVES -->
+    <section id="work" class="py-16 sm:py-20 bg-surface-raised border-b border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-wider text-accent font-semibold">02 // SELECTED INITIATIVES (CASE STUDIES &amp; BUSINESS EXECUTION)</p>
+            <h2 class="font-heading font-bold text-2xl sm:text-[32px] text-ink mt-1">
+              Challenge, Executive Role, and Measurable Outcome
+            </h2>
+          </div>
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="filterProjects('all')" class="proj-filter px-3 py-1.5 rounded-lg text-xs font-medium bg-ink text-surface transition">All Initiatives</button>
+            <button onclick="filterProjects('brand')" class="proj-filter px-3 py-1.5 rounded-lg text-xs font-medium bg-surface border border-line text-ink-secondary hover:text-ink transition">Brand &amp; Packaging</button>
+            <button onclick="filterProjects('ops')" class="proj-filter px-3 py-1.5 rounded-lg text-xs font-medium bg-surface border border-line text-ink-secondary hover:text-ink transition">Product &amp; Operations</button>
+            <button onclick="filterProjects('digital')" class="proj-filter px-3 py-1.5 rounded-lg text-xs font-medium bg-surface border border-line text-ink-secondary hover:text-ink transition">Digital Presence</button>
+          </div>
+        </div>
+
+        <!-- Case Study Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="projectGrid">
+          
+          <!-- Case Study 01 -->
+          <article data-category="brand" class="project-card bg-surface rounded-2xl border border-line p-6 shadow-subtle card-transition flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="px-2.5 py-1 rounded bg-gold-light text-gold font-medium">BRAND ARCHITECTURE</span>
+                <span class="text-ink-muted">01</span>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-ink">
+                Ara Chocolates Brand Identity &amp; Custom Packaging System
+              </h3>
+              <div class="space-y-2 text-xs sm:text-sm text-ink-secondary pt-2 border-t border-line">
+                <p><strong class="text-ink">Challenge:</strong> Establishing a distinctive, luxury artisan dark chocolate identity in the Bangladeshi confectionery market.</p>
+                <p><strong class="text-ink">Executive Role:</strong> As Co-Founder &amp; CEO, directed brand positioning, custom wrapper variants, and premium unboxing standards.</p>
+                <p><strong class="text-accent">Outcome:</strong> Built a cohesive product line ready for retail distribution, bespoke gifting, and BSTI licensing standards.</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-line flex items-center justify-between text-xs font-mono text-ink-muted">
+              <span>Brand Strategy · Packaging</span>
+              <a href="#venture" class="text-accent font-semibold hover:underline">View Brand →</a>
+            </div>
+          </article>
+
+          <!-- Case Study 02 -->
+          <article data-category="ops" class="project-card bg-surface rounded-2xl border border-line p-6 shadow-subtle card-transition flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="px-2.5 py-1 rounded bg-accent-muted text-accent font-medium">PRODUCT CRAFTSMANSHIP</span>
+                <span class="text-ink-muted">02</span>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-ink">
+                Precision Chocolate Tempering &amp; Dry Nut Infusion R&amp;D
+              </h3>
+              <div class="space-y-2 text-xs sm:text-sm text-ink-secondary pt-2 border-t border-line">
+                <p><strong class="text-ink">Challenge:</strong> Achieving consistent cocoa butter crystallization, shelf stability, and balanced roasted nut infusions.</p>
+                <p><strong class="text-ink">Executive Role:</strong> Standardized batch tempering curves and curated premium almond, cashew, and pistachio infusion ratios.</p>
+                <p><strong class="text-accent">Outcome:</strong> Consistent artisan bar quality with superior snap, gloss, and repeat customer satisfaction.</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-line flex items-center justify-between text-xs font-mono text-ink-muted">
+              <span>R&amp;D · Quality Control</span>
+              <a href="#roadmap" class="text-accent font-semibold hover:underline">View Roadmap →</a>
+            </div>
+          </article>
+
+          <!-- Case Study 03 -->
+          <article data-category="digital" class="project-card bg-surface rounded-2xl border border-line p-6 shadow-subtle card-transition flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="px-2.5 py-1 rounded bg-accent-muted text-accent font-medium">DIGITAL COMMERCE</span>
+                <span class="text-ink-muted">03</span>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-ink">
+                Direct-to-Consumer (D2C) Social Commerce &amp; Web Portal
+              </h3>
+              <div class="space-y-2 text-xs sm:text-sm text-ink-secondary pt-2 border-t border-line">
+                <p><strong class="text-ink">Challenge:</strong> Creating a seamless digital touchpoint where customers and collaborators can engage with the brand directly.</p>
+                <p><strong class="text-ink">Executive Role:</strong> Established the official Product/Service business page, visual storytelling, and executive web portal.</p>
+                <p><strong class="text-accent">Outcome:</strong> Streamlined order inquiries and talent onboarding within daily 10:00 AM – 4:00 PM operational windows.</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-line flex items-center justify-between text-xs font-mono text-ink-muted">
+              <span>D2C · Digital Strategy</span>
+              <a href="#collaborate" class="text-accent font-semibold hover:underline">Collaborate →</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="section section-work" id="work">
-      <div class="wrap">
-        <h2>Work</h2>
-        <article class="panel panel-cocoa">
-          <h3>Ara Chocolates</h3>
-          <p>I founded this small chocolate company in Bangladesh. I'm building it from the ground up: the brand, the product look, the website and our first business customers.</p>
-        </article>
-        <article class="panel panel-berry">
-          <h3>Websites</h3>
-          <p>I design and code websites by hand in HTML, CSS and JavaScript. I care about pages that load fast, work on phones and are easy to read. This profile is one of them.</p>
-        </article>
-        <article class="panel panel-white">
-          <h3>Video and colour</h3>
-          <p>I edit in CapCut and colour grade in DaVinci Resolve. I like turning flat footage into something cinematic, from night skies to cars and food.</p>
-        </article>
+    <!-- 6. "WORK WITH ME" — DUAL-TRACK COLLABORATION & BUSINESS PORTAL -->
+    <section id="collaborate" class="py-16 sm:py-20 border-b border-line bg-surface">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+        
+        <div class="max-w-3xl space-y-3">
+          <p class="font-mono text-xs uppercase tracking-wider text-accent font-semibold">03 // WORK WITH ME &amp; COLLABORATION PORTAL</p>
+          <h2 class="font-heading font-bold text-2xl sm:text-[32px] text-ink">
+            Learn about our vision and collaborate directly on our website or business projects.
+          </h2>
+          <p class="text-ink-secondary text-base">
+            Select your track below—whether you want to join our team to work on our website and brand projects, or inquire about <a href="#venture" class="text-[#2D6CDF] font-semibold underline">Ara Chocolates</a> orders and partnerships.
+          </p>
+        </div>
+
+        <!-- Dual Track Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Track 01: Work on Website / Ara Chocolates Projects (Talent & Collaborators) -->
+          <div class="rounded-2xl border-2 border-ink p-6 sm:p-8 bg-surface flex flex-col justify-between space-y-6 shadow-subtle">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-ink text-surface text-xs font-mono">
+                <span>TRACK 01 // JOIN OUR WEBSITE &amp; BRAND TEAM</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-ink">
+                Apply to Work on Our Website &amp; Ara Chocolates Projects
+              </h3>
+              <p class="text-sm text-ink-secondary leading-relaxed">
+                Are you a web developer, packaging designer, visual creator, or digital marketer? Collaborate with us on our digital platform and brand expansion:
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>1. Web Developer &amp; UI/UX Designer</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono text-[11px]">Website Team</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Collaborate on e-commerce features, interactive web modules, and storefront optimization.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>2. Packaging Designer &amp; Visual Content Creator</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono text-[11px]">Ara Chocolates</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Design custom chocolate bar wrappers, luxury gift boxes, product photography, and brand reels.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-surface-raised border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>3. Brand Marketing &amp; Distribution Associate</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono text-[11px]">Growth Team</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Support social media campaigns, customer engagement, and retail distribution outreach.</p>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="selectCollaborationMode('talent')" class="w-full py-3.5 px-4 rounded-xl bg-ink hover:bg-accent text-surface font-medium text-sm transition-colors flex items-center justify-center gap-2">
+              <span>Apply to Work With Us</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Track 02: Business Partnerships, Corporate Orders & Brand Inquiries -->
+          <div class="rounded-2xl border border-line p-6 sm:p-8 bg-surface-raised flex flex-col justify-between space-y-6 shadow-subtle">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-muted text-accent text-xs font-mono font-medium">
+                <span>TRACK 02 // BUSINESS, ORDERS &amp; PARTNERSHIPS</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-ink">
+                Partner With Ara Chocolates or Place Custom Orders
+              </h3>
+              <p class="text-sm text-ink-secondary leading-relaxed">
+                Connect directly for bespoke chocolate orders, corporate gifting, retail distribution, or strategic brand collaborations:
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-surface border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>● Signature Dark Chocolate &amp; Nut Infusion Orders</span>
+                    <span class="font-mono text-xs text-gold font-semibold">Custom Packs</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Bespoke dark chocolate bars and dry nut infusion assortments crafted to order.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-surface border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>● Corporate Gifting &amp; Custom Event Packaging</span>
+                    <span class="font-mono text-xs text-accent font-semibold">B2B &amp; Events</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Tailored packaging variants for corporate events, festivals, and special occasions.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-surface border border-line">
+                  <div class="flex justify-between items-center font-heading font-semibold text-sm text-ink">
+                    <span>● Retail Distribution &amp; Strategic Partnerships</span>
+                    <span class="font-mono text-xs text-accent font-semibold">Growth</span>
+                  </div>
+                  <p class="text-xs text-ink-secondary mt-1">Partner with Ara Chocolates to bring artisan Bangladeshi dark chocolate to new markets.</p>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="selectCollaborationMode('chocolate')" class="w-full py-3.5 px-4 rounded-xl bg-surface hover:bg-accent hover:text-surface text-ink border border-line-strong font-medium text-sm transition-colors flex items-center justify-center gap-2">
+              <span>Start Business or Order Inquiry</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="wrap">
-        <h2>Skills</h2>
-        <dl class="skill-list">
-          <div><dt>Web</dt><dd>HTML, CSS, JavaScript, interface design</dd></div>
-          <div><dt>Video</dt><dd>CapCut, DaVinci Resolve, colour grading</dd></div>
-          <div><dt>Business</dt><dd>Branding, brand strategy, entrepreneurship</dd></div>
-          <div><dt>Outside work</dt><dd>Astrophysics, history and geography, automotive engineering, literature</dd></div>
-        </dl>
+    <!-- 7. ARA CHOCOLATES STRATEGIC BUSINESS ROADMAP & INTERACTIVE ESTIMATOR -->
+    <section id="roadmap" class="py-16 sm:py-20 bg-surface-raised border-b border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left: Ara Chocolates Strategic Business Roadmap (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <p class="font-mono text-xs uppercase tracking-wider text-accent font-semibold">04 // STRATEGIC ROADMAP (ARA CHOCOLATES BUSINESS PLAN)</p>
+              <h2 class="font-heading font-bold text-2xl sm:text-[28px] text-ink mt-1">Ara Chocolates Multi-Phase Growth Roadmap</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-surface p-5 rounded-xl border border-line card-transition">
+                <div class="text-accent text-xs font-mono font-bold mb-2">PHASE 01 // FOUNDATION &amp; CRAFT</div>
+                <h3 class="font-heading font-bold text-base text-ink">Artisan Formulation &amp; Tempering</h3>
+                <p class="text-xs text-ink-secondary mt-1 leading-relaxed">
+                  Establishing core dark chocolate bar recipes, precision tempering workflows, and signature roasted dry nut infusions.
+                </p>
+              </div>
+
+              <div class="bg-surface p-5 rounded-xl border border-line card-transition">
+                <div class="text-accent text-xs font-mono font-bold mb-2">PHASE 02 // PACKAGING &amp; COMPLIANCE</div>
+                <h3 class="font-heading font-bold text-base text-ink">Custom Packaging &amp; BSTI Standards</h3>
+                <p class="text-xs text-ink-secondary mt-1 leading-relaxed">
+                  Launching bespoke packaging variants, food-grade quality assurance, and advancing BSTI licensing procedures.
+                </p>
+              </div>
+
+              <div class="bg-surface p-5 rounded-xl border border-line card-transition">
+                <div class="text-accent text-xs font-mono font-bold mb-2">PHASE 03 // DIGITAL &amp; D2C SCALE</div>
+                <h3 class="font-heading font-bold text-base text-ink">E-Commerce &amp; Brand Portal</h3>
+                <p class="text-xs text-ink-secondary mt-1 leading-relaxed">
+                  Expanding online order fulfillment across Dhaka and Manikganj with dedicated digital storefront capabilities.
+                </p>
+              </div>
+
+              <div class="bg-surface p-5 rounded-xl border border-line card-transition">
+                <div class="text-accent text-xs font-mono font-bold mb-2">PHASE 04 // RETAIL &amp; CORPORATE</div>
+                <h3 class="font-heading font-bold text-base text-ink">B2B Gifting &amp; Retail Outlets</h3>
+                <p class="text-xs text-ink-secondary mt-1 leading-relaxed">
+                  Partnering with premium retail stores and scaling customized corporate gift box collections nationwide.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Ara Chocolates Custom Batch Estimator (5 cols) -->
+          <div class="lg:col-span-5">
+            <div class="bg-surface rounded-2xl border border-line p-6 shadow-subtle space-y-4">
+              <div class="flex items-center justify-between border-b border-line pb-3">
+                <div>
+                  <span class="text-[11px] font-mono text-accent uppercase font-semibold">INTERACTIVE BUSINESS TOOL</span>
+                  <h3 class="font-heading font-bold text-lg text-ink">Ara Chocolates Batch Estimator</h3>
+                </div>
+                <span class="px-2 py-1 rounded bg-surface-raised border border-line font-mono text-xs text-ink">B2B / Custom</span>
+              </div>
+              <p class="text-xs text-ink-secondary">
+                Enter the number of custom chocolate bars to estimate cocoa weight and recommended packaging tier:
+              </p>
+              <div>
+                <label class="block text-xs font-mono text-ink-muted mb-1">QUANTITY OF BARS (NUMBER OF UNITS):</label>
+                <input type="number" id="barCountInput" value="25" min="1" oninput="calculateBatch()" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-raised border border-line font-mono text-sm text-ink focus:border-accent focus:outline-none" placeholder="e.g. 25" />
+              </div>
+              <div class="grid grid-cols-1 gap-2.5 font-mono text-xs pt-1">
+                <div class="p-3 rounded-lg bg-surface-raised border border-line flex justify-between items-center">
+                  <span class="text-ink-muted">EST. ARTISAN WEIGHT (100g/bar):</span>
+                  <span id="weightOutput" class="font-semibold text-accent">2.5 kg</span>
+                </div>
+                <div class="p-3 rounded-lg bg-surface-raised border border-line flex justify-between items-center">
+                  <span class="text-ink-muted">PACKAGING TIER:</span>
+                  <span id="tierOutput" class="font-semibold text-ink">Custom Gift Box Batch</span>
+                </div>
+                <div class="p-3 rounded-lg bg-surface-raised border border-line flex justify-between items-center">
+                  <span class="text-ink-muted">DISPATCH SCHEDULE:</span>
+                  <span id="windowOutput" class="font-semibold text-gold">10:00 AM – 4:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <h2>Let's make something good together.</h2>
-        <p class="contact-sub">For brand work, websites, video projects or a simple hello, send me a message. I reply as soon as I can.</p>
-        <div class="btn-row">
-          <!-- CHANGE THIS: replace YOUR-EMAIL@example.com with your real email -->
-          <a class="btn btn-berry" href="mailto:YOUR-EMAIL@example.com">Email me</a>
-          <a class="text-link" href="https://github.com/Arachocolates25" target="_blank" rel="noopener">GitHub</a>
-          <!-- To add Instagram, Facebook or LinkedIn: copy the GitHub line above and paste your profile link -->
+    <!-- 8. DIRECT CONTACT, WEBSITE LINK & INSTAGRAM HUB -->
+    <section id="contact" class="py-16 sm:py-24 bg-surface">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Context & Direct Channels (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-accent font-semibold">05 // DIRECT CONTACT &amp; LINKS</p>
+            <h2 class="font-heading font-bold text-2xl sm:text-[32px] text-ink leading-tight">
+              Connect for business inquiries, orders, or website collaboration.
+            </h2>
+            <p class="text-sm text-ink-secondary leading-relaxed">
+              Reach out during our operational hours (<strong>10:00 AM – 4:00 PM</strong>) via our official website link, Instagram profile, or the inquiry form on the right.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <!-- Website Link Box (Replacing WhatsApp) -->
+              <div class="p-4 rounded-xl bg-surface-raised border border-line flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] text-ink-muted font-mono">OFFICIAL WEBSITE LINK</p>
+                  <a href="https://arachocolates25.github.io/" target="_blank" rel="noopener" class="text-sm font-bold text-[#2D6CDF] underline hover:text-[#1E4FBF]">Ara Chocolates Official Page</a>
+                </div>
+                <button onclick="copyWebsiteLink()" class="px-3 py-1.5 rounded-lg bg-surface border border-line text-xs font-mono hover:border-accent transition">Copy Link</button>
+              </div>
+
+              <!-- Instagram Box (janna_tul921) -->
+              <div class="p-4 rounded-xl bg-surface-raised border border-line flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] text-ink-muted font-mono">INSTAGRAM PROFILE</p>
+                  <a href="https://www.instagram.com/janna_tul921?rpxt=dTQyZmxsOHpyM2E3" target="_blank" rel="noopener" class="text-sm font-bold text-ink hover:text-accent transition">janna_tul921</a>
+                </div>
+                <a href="https://www.instagram.com/janna_tul921?rpxt=dTQyZmxsOHpyM2E3" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-surface border border-line text-xs font-medium hover:border-accent transition flex items-center gap-1.5">
+                  <i class="fa-brands fa-instagram text-pink-600"></i>
+                  <span>janna_tul921 ↗</span>
+                </a>
+              </div>
+
+              <!-- Work Hours Box -->
+              <div class="p-4 rounded-xl bg-surface-raised border border-line flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] text-ink-muted font-mono">WORK HOURS</p>
+                  <p class="text-sm font-semibold text-ink">10:00 AM – 4:00 PM</p>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 font-mono text-xs">Active Daily</span>
+              </div>
+
+              <!-- Location Box -->
+              <div class="p-4 rounded-xl bg-surface-raised border border-line flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] text-ink-muted font-mono">LOCATION</p>
+                  <p class="text-sm font-semibold text-ink">Singair, Manikganj, Dhaka</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Smart Form (7 cols) -->
+          <div class="lg:col-span-7">
+            <form id="smartContactForm" onsubmit="handleFormSubmit(event)" class="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-5 shadow-subtle">
+              
+              <!-- Mode Selector Tabs inside Form -->
+              <div>
+                <label class="block text-xs font-mono uppercase text-ink-muted mb-2">Select Your Inquiry Purpose:</label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button type="button" id="tabTalent" onclick="selectCollaborationMode('talent', true)" class="py-2.5 px-3 rounded-lg border border-ink bg-ink text-surface text-xs font-medium text-left transition flex items-center justify-between">
+                    <span>🤝 Work on Website</span>
+                    <span>✓</span>
+                  </button>
+                  <button type="button" id="tabChoco" onclick="selectCollaborationMode('chocolate', true)" class="py-2.5 px-3 rounded-lg border border-line bg-surface text-ink-secondary text-xs font-medium text-left transition flex items-center justify-between">
+                    <span>🍫 Ara Chocolates</span>
+                    <span></span>
+                  </button>
+                  <button type="button" id="tabClient" onclick="selectCollaborationMode('client', true)" class="py-2.5 px-3 rounded-lg border border-line bg-surface text-ink-secondary text-xs font-medium text-left transition flex items-center justify-between">
+                    <span>💼 Partnership</span>
+                    <span></span>
+                  </button>
+                </div>
+                <input type="hidden" id="inquiryType" value="Website & Project Collaboration" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-ink mb-1">Your Full Name *</label>
+                  <input type="text" id="senderName" required placeholder="Enter your full name..." class="w-full px-3.5 py-2.5 rounded-lg bg-surface border border-line focus:border-accent focus:outline-none text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-ink mb-1">Email or Social Profile Link *</label>
+                  <input type="text" id="senderContact" required placeholder="you@example.com or profile link" class="w-full px-3.5 py-2.5 rounded-lg bg-surface border border-line focus:border-accent focus:outline-none text-sm" />
+                </div>
+              </div>
+
+              <!-- Dynamic Field -->
+              <div>
+                <label id="dynamicFieldLabel" class="block text-xs font-medium text-ink mb-1">Which area would you like to collaborate on?</label>
+                <select id="dynamicSelect" class="w-full px-3.5 py-2.5 rounded-lg bg-surface border border-line focus:border-accent focus:outline-none text-sm">
+                  <option value="Web Development & UI Design">Web Development &amp; UI Design (Website Team)</option>
+                  <option value="Packaging & Creative Design (Ara Chocolates)">Packaging &amp; Brand Design (Ara Chocolates)</option>
+                  <option value="Social Media & Visual Content">Social Media &amp; Visual Content Creation</option>
+                  <option value="Marketing & Distribution">Marketing &amp; Retail Distribution</option>
+                </select>
+              </div>
+
+              <div>
+                <label id="messageLabel" class="block text-xs font-medium text-ink mb-1">Your Message or Proposal Details *</label>
+                <textarea id="senderMessage" rows="4" required placeholder="Share your portfolio link, order details, or collaboration proposal..." class="w-full px-3.5 py-2.5 rounded-lg bg-surface border border-line focus:border-accent focus:outline-none text-sm"></textarea>
+              </div>
+
+              <div id="formFeedback" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium"></div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <button type="submit" class="flex-1 py-3.5 px-5 rounded-xl bg-accent hover:bg-accent-hover text-surface font-semibold text-sm transition flex items-center justify-center gap-2 shadow-subtle">
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                  <span>Copy Formatted Inquiry &amp; Connect via Instagram</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-row">
-      <p>&copy; <span id="year">2026</span> Rayhan Gazi</p>
-      <p>Khulna, Bangladesh</p>
+  <!-- MINIMALIST EXECUTIVE FOOTER -->
+  <footer class="bg-surface-raised border-t border-line py-10 text-xs text-ink-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-heading font-bold text-ink">© 2026 Jannatul Ferdous.</span>
+        <span>Singair, Manikganj, Dhaka · Co-Founder &amp; CEO, <a href="#venture" class="text-[#2D6CDF] underline font-semibold">Ara Chocolates</a>.</span>
+      </div>
+      <div class="flex items-center gap-5 font-mono">
+        <a href="https://arachocolates25.github.io/" target="_blank" rel="noopener" class="hover:text-ink transition">Website ↗</a>
+        <a href="https://www.instagram.com/janna_tul921?rpxt=dTQyZmxsOHpyM2E3" target="_blank" rel="noopener" class="hover:text-ink transition">janna_tul921 ↗</a>
+        <button onclick="openCommandModal()" class="text-accent hover:underline">⌘K Command Menu</button>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- HIGH-COMMAND PALETTE MODAL (⌘K / Ctrl+K) -->
+  <div id="commandModal" role="dialog" aria-modal="true" aria-label="Command menu" class="fixed inset-0 z-50 hidden bg-ink/40 backdrop-blur-xs flex items-start justify-center pt-20 px-4">
+    <div class="bg-surface w-full max-w-lg rounded-2xl border border-line shadow-modal overflow-hidden">
+      <div class="p-3.5 border-b border-line flex items-center gap-3 bg-surface-raised">
+        <span class="font-mono text-xs text-accent font-bold">⌘K</span>
+        <input type="text" id="commandSearch" oninput="filterCommands()" placeholder="Type a command (e.g., chocolate, work, roadmap, instagram, theme)..." class="w-full bg-transparent text-sm text-ink focus:outline-none" />
+        <button type="button" onclick="closeCommandModal()" class="px-2.5 py-1 text-xs font-mono bg-surface border border-line rounded text-ink-muted hover:text-ink whitespace-nowrap">← Back</button>
+      </div>
+      <div id="commandList" class="p-2 max-h-72 overflow-y-auto divide-y divide-line/50 text-sm">
+        <button type="button" onclick="runCommand('goto', '#venture')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>Explore Ara Chocolates Showcase</span>
+          <span class="font-mono text-xs text-ink-muted">Venture</span>
+        </button>
+        <button type="button" onclick="runCommand('goto', '#collaborate')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>Work With Me / Website Collaboration Portal</span>
+          <span class="font-mono text-xs text-ink-muted">Jump</span>
+        </button>
+        <button type="button" onclick="runCommand('goto', '#roadmap')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>View Ara Chocolates Business Roadmap</span>
+          <span class="font-mono text-xs text-ink-muted">Roadmap</span>
+        </button>
+        <button type="button" onclick="runCommand('copyWeb')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>Copy Official Website Link</span>
+          <span class="font-mono text-xs text-ink-muted">Action</span>
+        </button>
+        <button type="button" onclick="runCommand('instagram')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>Open Instagram Profile (janna_tul921)</span>
+          <span class="font-mono text-xs text-ink-muted">External ↗</span>
+        </button>
+        <button type="button" onclick="runCommand('themeBlue')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>White Theme Accent: Royal Slate Blue (#2D6CDF)</span>
+          <span class="font-mono text-xs text-ink-muted">Theme</span>
+        </button>
+        <button type="button" onclick="runCommand('themeMono')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>White Theme Accent: Pure Monochrome Black (#111111)</span>
+          <span class="font-mono text-xs text-ink-muted">Theme</span>
+        </button>
+        <button type="button" onclick="runCommand('themeGold')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>White Theme Accent: Ara Artisan Gold (#D97706)</span>
+          <span class="font-mono text-xs text-ink-muted">Theme</span>
+        </button>
+        <button type="button" onclick="runCommand('themeTeal')" class="cmd-item w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent-muted hover:text-accent flex items-center justify-between transition">
+          <span>White Theme Accent: Deep Emerald Teal (#0F766E)</span>
+          <span class="font-mono text-xs text-ink-muted">Theme</span>
+        </button>
+        <p id="commandEmpty" class="hidden px-3 py-4 text-xs text-ink-muted text-center">No matching command found.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+  <script>
+    // 1. Typewriter Role Animation (English Executive Roles)
+    const roles = [
+      "Co-Founder & CEO at Ara Chocolates",
+      "Admission Candidate & Entrepreneur",
+      "Artisan Chocolate Brand Strategist",
+      "Custom Packaging & Product Innovator"
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+    const typeEl = document.getElementById('typewriterText');
+
+    function runTypewriter() {
+      const current = roles[roleIdx];
+      typeEl.textContent = current.substring(0, charIdx);
+      if (!deleting && charIdx < current.length) {
+        charIdx++;
+        setTimeout(runTypewriter, 70);
+      } else if (deleting && charIdx > 0) {
+        charIdx--;
+        setTimeout(runTypewriter, 35);
+      } else {
+        deleting = !deleting;
+        if (!deleting) roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(runTypewriter, deleting ? 1800 : 300);
+      }
+    }
+    runTypewriter();
+
+    // 2. Live Profile Image Upload Preview (With localStorage persistence)
+    function handleProfileImageUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = document.getElementById('profileImagePreview');
+        const placeholder = document.getElementById('profilePlaceholder');
+        img.src = e.target.result;
+        img.classList.remove('hidden');
+        placeholder.classList.add('hidden');
+        try { localStorage.setItem('jannatul_profile_photo', e.target.result); } catch(err) {}
+      };
+      reader.readAsDataURL(file);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const savedPhoto = localStorage.getItem('jannatul_profile_photo');
+        if (savedPhoto) {
+          const img = document.getElementById('profileImagePreview');
+          const placeholder = document.getElementById('profilePlaceholder');
+          img.src = savedPhoto;
+          img.classList.remove('hidden');
+          placeholder.classList.add('hidden');
+        }
+      } catch(err) {}
+    });
+
+    // 3. Dynamic White-Theme Accent Switcher
+    function setAccent(defaultHex, hoverHex, mutedHex) {
+      document.documentElement.style.setProperty('--accent-default', defaultHex);
+      document.documentElement.style.setProperty('--accent-hover', hoverHex);
+      document.documentElement.style.setProperty('--accent-muted', mutedHex);
+    }
+
+    // 4. Copy Official Website Link (works on every browser, shows clear feedback)
+    const OFFICIAL_SITE_URL = 'https://arachocolates25.github.io/';
+    const INSTAGRAM_URL = 'https://www.instagram.com/janna_tul921?rpxt=dTQyZmxsOHpyM2E3';
+    let toastTimer;
+
+    function showToast(message) {
+      let t = document.getElementById('toastBox');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toastBox';
+        t.setAttribute('role', 'status');
+        t.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] max-w-[90%] px-4 py-2.5 rounded-lg bg-ink text-surface text-xs font-medium shadow-modal text-center';
+        document.body.appendChild(t);
+      }
+      t.textContent = message;
+      t.style.display = 'block';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { t.style.display = 'none'; }, 2400);
+    }
+
+    function copyText(text) {
+      return new Promise(resolve => {
+        const fallback = () => {
+          try {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.top = '0';
+            ta.style.left = '-9999px';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            ta.setSelectionRange(0, text.length);
+            const ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            resolve(!!ok);
+          } catch (err) { resolve(false); }
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(() => resolve(true), fallback);
+        } else {
+          fallback();
+        }
+      });
+    }
+
+    function copyWebsiteLink() {
+      copyText(OFFICIAL_SITE_URL).then(ok => {
+        if (ok) {
+          showToast('Website link copied');
+          const btnText = document.getElementById('copyWebBtnText');
+          if (btnText) {
+            btnText.textContent = '✓ Link Copied!';
+            setTimeout(() => { btnText.textContent = 'Copy Website Link'; }, 2200);
+          }
+        } else {
+          showToast('Could not copy. Link: ' + OFFICIAL_SITE_URL);
+        }
+      });
+    }
+
+    // 5. Ara Chocolates Interactive Tabs (English)
+    const araTabsData = {
+      bars: {
+        tag: 'PRODUCT LINE 01 // ARTISAN DARK CHOCOLATE',
+        title: 'Signature Artisan Dark Chocolate Bars',
+        desc: 'Ara Chocolates is an independent artisan chocolate company led by Co-Founder & CEO Jannatul Ferdous. Utilizing precision chocolate tempering techniques, we deliver a glossy finish, a crisp snap, and an authentic rich cocoa flavor profile.'
+      },
+      nuts: {
+        tag: 'PRODUCT LINE 02 // DRY NUT INFUSIONS',
+        title: 'Dry Nut Infusions (Roasted Almond, Cashew & Pistachio)',
+        desc: 'Crafted with carefully selected roasted almonds, cashews, and pistachios infused into rich dark chocolate bars—combining artisan texture with wholesome nutrition.'
+      },
+      pack: {
+        tag: 'PRODUCT LINE 03 // CUSTOM PACKAGING & QUALITY',
+        title: 'Custom Packaging Variants & BSTI Quality Standards',
+        desc: 'Designed for personal gifting, corporate events, and retail shelves with bespoke wrapper variants and strict food-grade hygiene compliance.'
+      }
+    };
+
+    function switchAraTab(tabKey) {
+      const data = araTabsData[tabKey];
+      document.getElementById('araTitle').textContent = data.title;
+      document.getElementById('araDesc').textContent = data.desc;
+      ['bars', 'nuts', 'pack'].forEach(k => {
+        const btn = document.getElementById('araBtn-' + k);
+        if (k === tabKey) {
+          btn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold bg-ink text-surface transition';
+        } else {
+          btn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold bg-surface border border-line text-ink-secondary hover:text-ink transition';
+        }
+      });
+    }
+
+    // 6. Case Study Category Filter
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 7. Interactive Ara Chocolates Batch Estimator
+    function calculateBatch() {
+      const count = parseInt(document.getElementById('barCountInput').value, 10);
+      if (isNaN(count) || count <= 0) {
+        document.getElementById('weightOutput').textContent = '—';
+        document.getElementById('tierOutput').textContent = '—';
+        return;
+      }
+      const kg = (count * 0.1).toFixed(1);
+      document.getElementById('weightOutput').textContent = kg + ' kg';
+      if (count < 10) {
+        document.getElementById('tierOutput').textContent = 'Personal Artisan Pack';
+      } else if (count < 50) {
+        document.getElementById('tierOutput').textContent = 'Custom Gift Box Batch';
+      } else {
+        document.getElementById('tierOutput').textContent = 'Corporate / Wholesale Tier';
+      }
+    }
+
+    // 8. Multi-Track Collaboration Mode Switcher
+    function selectCollaborationMode(mode, noScroll) {
+      const tabTalent = document.getElementById('tabTalent');
+      const tabClient = document.getElementById('tabClient');
+      const tabChoco = document.getElementById('tabChoco');
+      const inquiryType = document.getElementById('inquiryType');
+      const dynamicLabel = document.getElementById('dynamicFieldLabel');
+      const dynamicSelect = document.getElementById('dynamicSelect');
+
+      const activeClass = 'py-2.5 px-3 rounded-lg border border-ink bg-ink text-surface text-xs font-medium text-left transition flex items-center justify-between';
+      const inactiveClass = 'py-2.5 px-3 rounded-lg border border-line bg-surface text-ink-secondary text-xs font-medium text-left transition flex items-center justify-between';
+
+      tabTalent.className = mode === 'talent' ? activeClass : inactiveClass;
+      tabClient.className = mode === 'client' ? activeClass : inactiveClass;
+      tabChoco.className = mode === 'chocolate' ? activeClass : inactiveClass;
+      [[tabTalent, 'talent'], [tabClient, 'client'], [tabChoco, 'chocolate']].forEach(([el, m]) => {
+        const mark = el.lastElementChild;
+        if (mark) mark.textContent = (mode === m) ? '✓' : '';
+      });
+
+      if (mode === 'talent') {
+        inquiryType.value = 'Website & Project Collaboration';
+        dynamicLabel.textContent = 'Which area would you like to collaborate on?';
+        dynamicSelect.innerHTML = `
+          <option value="Web Development & UI Design">Web Development & UI Design (Website Team)</option>
+          <option value="Packaging & Creative Design (Ara Chocolates)">Packaging & Brand Design (Ara Chocolates)</option>
+          <option value="Social Media & Visual Content">Social Media & Visual Content Creation</option>
+          <option value="Marketing & Distribution">Marketing & Retail Distribution</option>
+        `;
+      } else if (mode === 'client') {
+        inquiryType.value = 'Strategic Business Partnership';
+        dynamicLabel.textContent = 'Select Partnership Type:';
+        dynamicSelect.innerHTML = `
+          <option value="Retail & Storefront Distribution">Retail & Storefront Distribution</option>
+          <option value="Corporate Gifting Partnership">Corporate Gifting Partnership</option>
+          <option value="Brand & Media Collaboration">Brand & Media Collaboration</option>
+        `;
+      } else {
+        inquiryType.value = 'Ara Chocolates Custom Order';
+        dynamicLabel.textContent = 'Select Ara Chocolates Product Line:';
+        dynamicSelect.innerHTML = `
+          <option value="Signature Dark Chocolate Bars">Signature Dark Chocolate Bars</option>
+          <option value="Dry Nut Infusion Gift Box">Dry Nut Infusion Custom Gift Box</option>
+          <option value="Custom Event & Corporate Packaging">Custom Event & Corporate Packaging</option>
+        `;
+      }
+      if (!noScroll) {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // 9. Form Submission Handler (Copies Formatted Inquiry & Opens Instagram Profile janna_tul921)
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const type = document.getElementById('inquiryType').value;
+      const name = document.getElementById('senderName').value;
+      const contact = document.getElementById('senderContact').value;
+      const detail = document.getElementById('dynamicSelect').value;
+      const msg = document.getElementById('senderMessage').value;
+
+      const textBody = `Hello Jannatul Ferdous,
+[${type}]
+Name: ${name}
+Contact: ${contact}
+Topic: ${detail}
+Message: ${msg}`;
+
+      const feedback = document.getElementById('formFeedback');
+      copyText(textBody).then(ok => {
+        feedback.textContent = ok
+          ? '✓ Your inquiry has been copied to your clipboard! Opening Instagram (janna_tul921) so you can paste and send it directly.'
+          : 'Automatic copy was not possible, please copy your message manually. Opening Instagram (janna_tul921).';
+        feedback.classList.remove('hidden');
+
+        setTimeout(() => {
+          const w = window.open(INSTAGRAM_URL, '_blank');
+          if (w) {
+            w.opener = null;
+          } else {
+            feedback.textContent += ' If Instagram did not open, please tap the janna_tul921 link above.';
+          }
+        }, 900);
+      });
+    }
+
+    // 10. High-Command Palette (⌘K / Ctrl+K)
+    const commandModal = document.getElementById('commandModal');
+    const commandSearch = document.getElementById('commandSearch');
+    let commandHistoryPushed = false;
+
+    function isCommandOpen() {
+      return !commandModal.classList.contains('hidden');
+    }
+
+    function openCommandModal() {
+      if (isCommandOpen()) return;
+      commandModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      commandSearch.value = '';
+      filterCommands();
+      // Lets the phone's own Back button close the window
+      try {
+        history.pushState({ commandOpen: true }, '');
+        commandHistoryPushed = true;
+      } catch (err) {
+        commandHistoryPushed = false;
+      }
+      setTimeout(() => commandSearch.focus(), 50);
+    }
+
+    function closeCommandModal(fromPopState) {
+      if (!isCommandOpen()) return;
+      commandModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      commandSearch.blur();
+      if (commandHistoryPushed) {
+        commandHistoryPushed = false;
+        if (fromPopState !== true) {
+          try { history.back(); } catch (err) {}
+        }
+      }
+    }
+
+    function filterCommands() {
+      const q = commandSearch.value.trim().toLowerCase();
+      let visible = 0;
+      document.querySelectorAll('.cmd-item').forEach(item => {
+        const show = item.textContent.toLowerCase().includes(q);
+        item.style.display = show ? 'flex' : 'none';
+        if (show) visible++;
+      });
+      document.getElementById('commandEmpty').classList.toggle('hidden', visible > 0);
+    }
+
+    function runCommand(action, target) {
+      // Actions that need a direct tap run first, before the window closes
+      if (action === 'copyWeb') {
+        copyWebsiteLink();
+      } else if (action === 'instagram') {
+        const w = window.open(INSTAGRAM_URL, '_blank');
+        if (w) w.opener = null;
+      } else if (action === 'themeBlue') {
+        setAccent('#2D6CDF', '#1E4FBF', '#EBF2FF');
+      } else if (action === 'themeMono') {
+        setAccent('#111111', '#27272A', '#F4F4F5');
+      } else if (action === 'themeGold') {
+        setAccent('#D97706', '#B45309', '#FEF3C7');
+      } else if (action === 'themeTeal') {
+        setAccent('#0F766E', '#115E59', '#CCFBF1');
+      }
+
+      const hadHistory = commandHistoryPushed;
+      closeCommandModal();
+
+      if (action === 'goto') {
+        const el = document.querySelector(target);
+        // small wait so the browser finishes its history step before scrolling
+        setTimeout(() => { if (el) el.scrollIntoView({ behavior: 'smooth' }); }, hadHistory ? 250 : 0);
+      }
+    }
+
+    // Tapping/clicking anywhere outside the window (above or below) closes it
+    commandModal.addEventListener('click', (e) => {
+      if (e.target === commandModal) closeCommandModal();
+    });
+
+    // Phone Back button closes the window
+    window.addEventListener('popstate', () => {
+      if (isCommandOpen()) closeCommandModal(true);
+    });
+
+    // Enter runs the first matching command
+    commandSearch.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const first = Array.from(document.querySelectorAll('.cmd-item')).find(i => i.style.display !== 'none');
+        if (first) first.click();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        isCommandOpen() ? closeCommandModal() : openCommandModal();
+      } else if (e.key === 'Escape') {
+        closeCommandModal();
+      }
+    });
+  </script>
 </body>
 </html>
