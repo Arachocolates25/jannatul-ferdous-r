@@ -1,6 +1,7 @@
-# Rayhan — Personal Portfolio
+# Rayhan — Personal Portfolio (Final v2 — High-End)
 
-Super-fancy personal portfolio website for Rayhan (Khulna, Bangladesh).
+Super-fancy, high-end personal portfolio website for Rayhan (Khulna, Bangladesh).
+Lots of CSS + JavaScript: preloader, particle canvas, custom cursor, scroll progress, 3D tilt, animated counters, marquee, gallery filter + lightbox, Before/After compare slider, form validation, toast notifications, dark/light mode.
 
 Co-Founder of Ara Chocolates · Web Creator · Video Editor & Colour Grader
 

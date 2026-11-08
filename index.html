@@ -5,13 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rayhan — Young Entrepreneur, Tech Enthusiast & Visual Creator</title>
 <meta name="description" content="Personal portfolio of Rayhan from Khulna, Bangladesh — Co-Founder of Ara Chocolates, web creator, video editor and colour grader.">
+<meta property="og:title" content="Rayhan — Portfolio">
+<meta property="og:description" content="Building brands, websites and cinematic visuals from Khulna, Bangladesh.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- 1. HEADER & NAVIGATION -->
+<div class="preloader" id="preloader"><div class="loader-logo">R</div><div class="loader-bar"><i></i></div><p>Loading Rayhan…</p></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- 1. HEADER -->
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="#home" aria-label="Rayhan home">
@@ -28,6 +35,7 @@
     </nav>
     <div class="header-actions">
       <button class="theme-btn" id="themeToggle" aria-label="Switch dark / light mode" title="Dark / Light mode">🌙</button>
+      <a class="btn btn-small btn-primary header-cta" href="#contact">Hire Me</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </div>
@@ -36,32 +44,39 @@
 <main>
 <!-- 2. HERO -->
 <section class="hero" id="home">
-  <div class="hero-glow"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
   <div class="container hero-grid">
     <div class="hero-text reveal">
-      <p class="eyebrow">👋 Hello, I'm</p>
+      <p class="eyebrow"><span class="pulse-dot"></span> Available for collaborations · Khulna, Bangladesh</p>
       <h1>Rayhan</h1>
       <h2 class="typing-line"><span id="typed"></span><span class="caret">|</span></h2>
       <p class="hero-sub">From Khulna, Bangladesh — building brands, websites and cinematic visuals. I turn ideas into things people can see, taste and remember.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#ventures">Explore My Work →</a>
-        <a class="btn btn-outline" href="#contact">Contact Me</a>
+        <a class="btn btn-primary magnetic" href="#ventures">Explore My Work →</a>
+        <a class="btn btn-outline magnetic" href="#contact">Contact Me</a>
       </div>
       <div class="hero-stats">
-        <div><strong>3+</strong><span>Ventures & Projects</span></div>
-        <div><strong>4</strong><span>Creative Skills</span></div>
+        <div><strong><span class="count" data-count="3">0</span>+</strong><span>Ventures & Projects</span></div>
+        <div><strong><span class="count" data-count="12">0</span>+</strong><span>Projects Shipped</span></div>
+        <div><strong><span class="count" data-count="4">0</span></strong><span>Core Skills</span></div>
         <div><strong>∞</strong><span>Curiosity</span></div>
       </div>
     </div>
     <div class="hero-visual reveal">
-      <div class="glow-frame">
+      <div class="glow-frame tilt" data-tilt>
         <img src="https://avatars.githubusercontent.com/u/328727512?v=4" alt="Rayhan — portrait" onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'">
         <div class="avatar-fallback" id="avatarFallback">R</div>
         <span class="badge badge-1">✦ Co-Founder · Ara Chocolates</span>
         <span class="badge badge-2">🎬 Colour Grading</span>
+        <span class="badge badge-3">⚡ Web · Video · Brand</span>
       </div>
     </div>
   </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>ENTREPRENEURSHIP ✦ WEB DESIGN ✦ COLOUR GRADING ✦ VIDEO EDITING ✦ BRAND STRATEGY ✦ ASTROPHYSICS ✦ </span>
+    <span>ENTREPRENEURSHIP ✦ WEB DESIGN ✦ COLOUR GRADING ✦ VIDEO EDITING ✦ BRAND STRATEGY ✦ ASTROPHYSICS ✦ </span>
+  </div></div>
   <a class="scroll-hint" href="#about">Scroll ↓</a>
 </section>
 
@@ -71,16 +86,17 @@
     <p class="section-eyebrow">About</p>
     <h2 class="section-title">My Story</h2>
     <div class="about-grid">
-      <div class="card story-card reveal">
+      <div class="card story-card reveal glass">
         <p>I'm Rayhan — a young entrepreneur and creator from Khulna, Bangladesh, who loves building things from scratch. From a chocolate brand to websites and cinematic video, I learn by doing.</p>
         <p>My thinking is simple: start small, stay curious, and make every detail count. I study ICT and design, explore astrophysics, history and cars in my free time, and I'm always planning the next thing.</p>
         <p>My goal is to grow Ara Chocolates into a brand Bangladesh remembers — and to keep creating work that looks as good as it feels.</p>
+        <div class="quote">“Start small. Stay curious. Make every detail count.”</div>
       </div>
       <div class="info-cards">
-        <div class="info-card reveal"><span class="icon">📍</span><div><strong>Location</strong><p>Khulna, Bangladesh</p></div></div>
-        <div class="info-card reveal"><span class="icon">🎓</span><div><strong>Focus</strong><p>ICT, Web Design & Business</p></div></div>
-        <div class="info-card reveal"><span class="icon">💡</span><div><strong>Main Interests</strong><p>Entrepreneurship, Video & Colour</p></div></div>
-        <div class="info-card reveal"><span class="icon">🚀</span><div><strong>Currently</strong><p>Building Ara Chocolates</p></div></div>
+        <div class="info-card reveal tilt" data-tilt><span class="icon">📍</span><div><strong>Location</strong><p>Khulna, Bangladesh</p></div></div>
+        <div class="info-card reveal tilt" data-tilt><span class="icon">🎓</span><div><strong>Focus</strong><p>ICT, Web Design & Business</p></div></div>
+        <div class="info-card reveal tilt" data-tilt><span class="icon">💡</span><div><strong>Main Interests</strong><p>Entrepreneurship, Video & Colour</p></div></div>
+        <div class="info-card reveal tilt" data-tilt><span class="icon">🚀</span><div><strong>Currently</strong><p>Building Ara Chocolates</p></div></div>
       </div>
     </div>
   </div>
@@ -91,36 +107,33 @@
   <div class="container">
     <p class="section-eyebrow">Ventures & Work</p>
     <h2 class="section-title">What I Build</h2>
-    <p class="section-sub">Three directions, one obsession — quality.</p>
+    <p class="section-sub">Three directions, one obsession — quality. Hover a card to see it lift, tilt and glow.</p>
     <div class="venture-grid">
-      <article class="venture-card reveal">
-        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&q=80&auto=format&fit=crop" alt="Ara Chocolates">
+      <article class="venture-card reveal tilt" data-tilt>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&q=80&auto=format&fit=crop" alt="Ara Chocolates" loading="lazy"><span class="img-chip">🍫 Premium</span></div>
         <div class="venture-body">
           <span class="tag">Startup & Business</span>
-          <h3>Ara Chocolates</h3>
-          <p class="role">Co-Founder</p>
+          <h3>Ara Chocolates</h3><p class="role">Co-Founder</p>
           <p>Premium handmade chocolates, built from a small idea in Khulna into a brand with its own taste, look and story.</p>
-          <a class="btn btn-small" href="https://arachocolates25.github.io/" target="_blank" rel="noopener">Visit Brand →</a>
+          <a class="btn btn-small btn-primary" href="https://arachocolates25.github.io/" target="_blank" rel="noopener">Visit Brand →</a>
         </div>
       </article>
-      <article class="venture-card reveal">
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80&auto=format&fit=crop" alt="Web projects">
+      <article class="venture-card reveal tilt" data-tilt>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80&auto=format&fit=crop" alt="Web projects" loading="lazy"><span class="img-chip">💻 HTML · CSS · JS</span></div>
         <div class="venture-body">
           <span class="tag">Tech & Web Projects</span>
-          <h3>Web Design & ICT</h3>
-          <p class="role">Designer & Developer</p>
-          <p>Clean, fast, responsive websites in HTML & CSS — from exam and study tools to brand pages and personal sites like this one.</p>
-          <a class="btn btn-small" href="https://github.com/Arachocolates25" target="_blank" rel="noopener">View on GitHub →</a>
+          <h3>Web Design & ICT</h3><p class="role">Designer & Developer</p>
+          <p>Clean, fast, responsive websites in HTML, CSS & JavaScript — from exam and study tools to brand pages and personal sites like this one.</p>
+          <a class="btn btn-small btn-primary" href="https://github.com/Arachocolates25" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
       </article>
-      <article class="venture-card reveal">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&q=80&auto=format&fit=crop" alt="Video editing and colour grading">
+      <article class="venture-card reveal tilt" data-tilt>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&q=80&auto=format&fit=crop" alt="Video editing and colour grading" loading="lazy"><span class="img-chip">🎬 Cinematic</span></div>
         <div class="venture-body">
           <span class="tag">Video & Colour Grading</span>
-          <h3>Cinematic Video</h3>
-          <p class="role">Editor & Colourist</p>
-          <p>Video editing and colour grading that gives every shot a filmic mood — watch the showreel and before / after grades below.</p>
-          <button class="btn btn-small" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">▶ Play Showreel</button>
+          <h3>Cinematic Video</h3><p class="role">Editor & Colourist</p>
+          <p>Video editing and colour grading that gives every shot a filmic mood — try the Before / After slider in the Gallery below.</p>
+          <button class="btn btn-small btn-primary" onclick="document.getElementById('compare').scrollIntoView({behavior:'smooth'})">▶ See Before / After</button>
         </div>
       </article>
     </div>
@@ -133,15 +146,16 @@
     <p class="section-eyebrow">Skills & Passions</p>
     <h2 class="section-title">Skills & Interests</h2>
     <div class="skills-grid">
-      <div class="card reveal">
+      <div class="card reveal glass">
         <h3>Technical & Creative Skills</h3>
         <div class="skill"><div class="skill-top"><span>HTML & Web Design</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
         <div class="skill"><div class="skill-top"><span>Video Editing</span><span>88%</span></div><div class="bar"><i style="--w:88%"></i></div></div>
         <div class="skill"><div class="skill-top"><span>Colour Grading</span><span>92%</span></div><div class="bar"><i style="--w:92%"></i></div></div>
         <div class="skill"><div class="skill-top"><span>Brand Strategy</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
-        <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CapCut</span><span>DaVinci Resolve</span><span>Branding</span></div>
+        <div class="skill"><div class="skill-top"><span>JavaScript & Interactivity</span><span>82%</span></div><div class="bar"><i style="--w:82%"></i></div></div>
+        <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CapCut</span><span>DaVinci Resolve</span><span>Branding</span><span>UI / UX</span></div>
       </div>
-      <div class="card reveal">
+      <div class="card reveal glass">
         <h3>Knowledge & Interests</h3>
         <div class="interest-grid">
           <div class="interest"><span>🪐</span><strong>Astrophysics</strong><p>Stars, space & the universe</p></div>
@@ -149,6 +163,7 @@
           <div class="interest"><span>🏎️</span><strong>Automotive Engineering</strong><p>Engines, design & speed</p></div>
           <div class="interest"><span>📚</span><strong>Literature</strong><p>Stories that stay with you</p></div>
         </div>
+        <div class="mini-stats"><div><strong>5+</strong><span>Years learning</span></div><div><strong>100%</strong><span>Passion</span></div></div>
       </div>
     </div>
   </div>
@@ -160,16 +175,35 @@
     <p class="section-eyebrow">Gallery & Thoughts</p>
     <h2 class="section-title">Visual Work & Notes</h2>
 
+    <div class="filter-row" role="group" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="space">Space</button>
+      <button class="filter-btn" data-filter="auto">Automotive</button>
+      <button class="filter-btn" data-filter="film">Film / Colour</button>
+      <button class="filter-btn" data-filter="brand">Brand</button>
+    </div>
+
     <div class="slider reveal" id="slider">
       <div class="slides" id="slides">
-        <figure><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop" alt="Astrophotography grade"><figcaption>🪐 Space Grade — Before / After</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=80&auto=format&fit=crop" alt="Automotive grade"><figcaption>🏎️ Automotive — Cinematic Grade</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&q=80&auto=format&fit=crop" alt="Camera and colour work"><figcaption>🎬 Colour Work — Film Look</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80&auto=format&fit=crop" alt="Chocolate and brand shoot"><figcaption>🍫 Ara Chocolates — Brand Shoot</figcaption></figure>
+        <figure data-cat="space"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop" alt="Astrophotography grade" data-full="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1600&q=80&auto=format&fit=crop"><figcaption>🪐 Space Grade — click to zoom</figcaption></figure>
+        <figure data-cat="auto"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=80&auto=format&fit=crop" alt="Automotive grade" data-full="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80&auto=format&fit=crop"><figcaption>🏎️ Automotive — Cinematic Grade</figcaption></figure>
+        <figure data-cat="film"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&q=80&auto=format&fit=crop" alt="Camera and colour work" data-full="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&q=80&auto=format&fit=crop"><figcaption>🎬 Colour Work — Film Look</figcaption></figure>
+        <figure data-cat="brand"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80&auto=format&fit=crop" alt="Chocolate and brand shoot" data-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop"><figcaption>🍫 Ara Chocolates — Brand Shoot</figcaption></figure>
       </div>
       <button class="slide-btn prev" id="prevBtn" aria-label="Previous">‹</button>
       <button class="slide-btn next" id="nextBtn" aria-label="Next">›</button>
       <div class="dots" id="dots"></div>
+    </div>
+
+    <div class="compare reveal" id="compare">
+      <h3>Before / After — drag the slider</h3>
+      <div class="compare-box" id="compareBox">
+        <img class="compare-after" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop" alt="After colour grading">
+        <div class="compare-before" id="compareBefore"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop" alt="Before colour grading"></div>
+        <input type="range" min="0" max="100" value="50" id="compareRange" aria-label="Before after slider">
+        <span class="compare-label label-before">BEFORE</span><span class="compare-label label-after">AFTER</span>
+      </div>
+      <p class="compare-note">The “before” side is flat and dull — drag to see the graded, cinematic version.</p>
     </div>
 
     <div class="articles">
@@ -188,10 +222,11 @@
     <h2 class="section-title">Let's Connect</h2>
     <p class="section-sub">Have a project, a collaboration, or just want to say hello?</p>
     <div class="contact-grid">
-      <form class="card contact-form reveal" id="contactForm">
-        <label>Name<input type="text" name="name" placeholder="Your name" required></label>
+      <form class="card contact-form reveal glass" id="contactForm" novalidate>
+        <label>Name<input type="text" name="name" placeholder="Your name" required minlength="2"></label>
         <label>Email<input type="email" name="email" placeholder="you@example.com" required></label>
-        <label>Message<textarea name="message" rows="5" placeholder="Tell me about your idea…" required></textarea></label>
+        <label>Message<textarea name="message" rows="5" placeholder="Tell me about your idea…" required minlength="10"></textarea></label>
+        <p class="form-error" id="formError" hidden></p>
         <button class="btn btn-primary" type="submit">Send Message →</button>
         <p class="form-note" id="formNote" hidden>Thanks! Your message is ready — your email app will open to send it.</p>
       </form>
@@ -211,8 +246,16 @@
 
 <footer class="footer">
   <p>© 2026 Rayhan. All Rights Reserved.</p>
-  <p class="footer-sub">Designed & built with ♥ in Khulna, Bangladesh</p>
+  <p class="footer-sub">Designed & built with ♥ in Khulna, Bangladesh · HTML · CSS · JavaScript</p>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="Gallery image enlarged">
+  <p id="lightboxCap"></p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script src="script.js"></script>
 </body>
