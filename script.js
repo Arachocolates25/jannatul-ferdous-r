@@ -1,22 +1,39 @@
-// ===== RAYHAN PORTFOLIO — HIGH-END JS v2 =====
+// ===== Rayhan Gazi — v3, rebuilt from your uploaded files =====
 const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const root = document.documentElement;
 
 // Preloader
 window.addEventListener('load', () => setTimeout(() => $('#preloader').classList.add('done'), 500));
-setTimeout(() => $('#preloader').classList.add('done'), 2600); // safety
+setTimeout(() => $('#preloader').classList.add('done'), 2600);
 
-// Theme toggle — default dark, saved
+// Mobile menu: open and close (from your uploaded file, kept)
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+});
+nav.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Keep the footer year up to date (from your uploaded file, kept)
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Theme toggle — light paper by default, dark cocoa saved
 const themeBtn = $('#themeToggle');
-const saved = localStorage.getItem('rayhan-theme');
+const saved = localStorage.getItem('rayhan-gazi-theme');
 if (saved) root.setAttribute('data-theme', saved);
-const syncTheme = () => themeBtn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌙' : '☀️';
+const syncTheme = () => themeBtn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
 syncTheme();
 themeBtn.addEventListener('click', () => {
   const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  localStorage.setItem('rayhan-theme', next);
+  localStorage.setItem('rayhan-gazi-theme', next);
   syncTheme();
   showToast(next === 'dark' ? 'Dark mode on 🌙' : 'Light mode on ☀️');
 });
@@ -32,11 +49,6 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Mobile menu
-const menuBtn = $('#menuBtn'), nav = $('#nav');
-menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
-$$('#nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-
 // Toast
 let toastTimer;
 function showToast(msg){
@@ -45,15 +57,15 @@ function showToast(msg){
 }
 
 // Typing animation
-const roles = ['Young Entrepreneur', 'Tech Enthusiast', 'Visual Creator', 'Colour Grader'];
+const roles = ['Founder of Ara Chocolates', 'Web Creator', 'Video Editor', 'Colour Grader'];
 const typedEl = $('#typed');
 let roleIndex = 0, charIndex = 0, deleting = false;
 (function type(){
   const word = roles[roleIndex];
   typedEl.textContent = word.slice(0, charIndex);
-  if (!deleting && charIndex < word.length) { charIndex++; setTimeout(type, 75); }
+  if (!deleting && charIndex < word.length) { charIndex++; setTimeout(type, 70); }
   else if (!deleting) { deleting = true; setTimeout(type, 1700); }
-  else if (charIndex > 0) { charIndex--; setTimeout(type, 32); }
+  else if (charIndex > 0) { charIndex--; setTimeout(type, 30); }
   else { deleting = false; roleIndex = (roleIndex + 1) % roles.length; setTimeout(type, 320); }
 })();
 
@@ -62,7 +74,7 @@ const canvas = $('#particles'), ctx = canvas.getContext('2d');
 let particles = [], W, H;
 function resizeCanvas(){
   W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight;
-  particles = Array.from({ length: Math.min(70, W / 18) }, () => ({
+  particles = Array.from({ length: Math.min(60, W / 20) }, () => ({
     x: Math.random() * W, y: Math.random() * H,
     r: Math.random() * 2 + .6, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35,
     gold: Math.random() > .75,
@@ -76,7 +88,7 @@ resizeCanvas(); window.addEventListener('resize', resizeCanvas);
     if (p.x < 0 || p.x > W) p.vx *= -1;
     if (p.y < 0 || p.y > H) p.vy *= -1;
     ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = p.gold ? 'rgba(245,197,66,.85)' : 'rgba(56,189,248,.75)'; ctx.fill();
+    ctx.fillStyle = p.gold ? 'rgba(233,185,73,.85)' : 'rgba(197,219,154,.75)'; ctx.fill();
   }
   requestAnimationFrame(drawParticles);
 })();
@@ -112,24 +124,12 @@ $$('[data-tilt]').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-    card.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
+    card.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-5px)`;
   });
   card.addEventListener('mouseleave', () => card.style.transform = '');
 });
 
 // Scroll reveal + skill bars + counters
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('visible');
-    $$('.bar i', e.target).forEach(b => b.classList.add('filled'));
-    $$('.count', e.target).forEach(runCounter);
-    if (e.target.classList.contains('skills-grid') || e.target.closest('#skills')) $$('.bar i').forEach(b => b.classList.add('filled'));
-    io.unobserve(e.target);
-  });
-}, { threshold: .15 });
-$$('.reveal').forEach(el => io.observe(el));
-$$('.bar i').forEach(b => io.observe(b.closest('.card') || b));
 function runCounter(el){
   if (el.dataset.done) return; el.dataset.done = '1';
   const target = +el.dataset.count, start = performance.now();
@@ -139,9 +139,19 @@ function runCounter(el){
     if (p < 1) requestAnimationFrame(tick);
   })(start);
 }
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visible');
+    $$('.bar i', e.target).forEach(b => b.classList.add('filled'));
+    $$('.count', e.target).forEach(runCounter);
+    io.unobserve(e.target);
+  });
+}, { threshold: .15 });
+$$('.reveal').forEach(el => io.observe(el));
+$$('.skill-bars').forEach(el => io.observe(el));
 
 // Active nav highlighting
-const sections = ['home', 'about', 'ventures', 'skills', 'gallery', 'contact'];
 const navLinks = $$('#nav a');
 const navIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -149,7 +159,9 @@ const navIO = new IntersectionObserver(entries => {
     navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
   });
 }, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(id => { const s = document.getElementById(id); if (s) navIO.observe(s); });
+['about', 'roles', 'projects', 'gallery', 'skills', 'contact'].forEach(id => {
+  const s = document.getElementById(id); if (s) navIO.observe(s);
+});
 
 // Gallery slider + filter + lightbox
 const slides = $('#slides'), total = slides.children.length, dotsWrap = $('#dots');
@@ -169,7 +181,6 @@ function restartAuto(){ clearInterval(autoTimer); autoTimer = setInterval(() => 
 $('#prevBtn').addEventListener('click', () => { goTo(current - 1); restartAuto(); });
 $('#nextBtn').addEventListener('click', () => { goTo(current + 1); restartAuto(); });
 goTo(0); restartAuto();
-// touch swipe
 let touchX = null;
 slides.addEventListener('touchstart', e => touchX = e.touches[0].clientX, { passive: true });
 slides.addEventListener('touchend', e => {
@@ -187,7 +198,6 @@ $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
   const figs = $$('#slides figure');
   const visible = figs.filter(fig => f === 'all' || fig.dataset.cat === f);
   figs.forEach(fig => fig.style.display = (f === 'all' || fig.dataset.cat === f) ? '' : 'none');
-  // jump to first visible slide
   const idx = figs.indexOf(visible[0]);
   if (idx >= 0) goTo(idx);
   showToast(f === 'all' ? 'Showing all work' : 'Filtered: ' + btn.textContent);
@@ -242,5 +252,5 @@ $('#contactForm').addEventListener('submit', e => {
   showToast('Thanks ' + name.split(' ')[0] + '! Opening your email app…');
   const subject = encodeURIComponent('Portfolio message from ' + name);
   const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
-  window.location.href = `mailto:hello@rayhan.example?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:YOUR-EMAIL@example.com?subject=${subject}&body=${body}`;
 });

@@ -1,7 +1,24 @@
-# Rayhan — Personal Portfolio (Final v2 — High-End)
+# Rayhan Gazi — Personal Portfolio (v3 — rebuilt from your files)
 
-Super-fancy, high-end personal portfolio website for Rayhan (Khulna, Bangladesh).
-Lots of CSS + JavaScript: preloader, particle canvas, custom cursor, scroll progress, 3D tilt, animated counters, marquee, gallery filter + lightbox, Before/After compare slider, form validation, toast notifications, dark/light mode.
+High-end personal portfolio for Rayhan Gazi (Khulna, Bangladesh), rebuilt from the
+uploaded index.html / styles.css / script.js — cocoa #2a1710, raspberry #d6336c,
+blush, paper, pistachio, DM Sans + Fraunces.
+
+Added on top of your base: preloader, particle canvas, custom cursor, scroll
+progress, 3D tilt, animated counters, marquee, gallery filter + slider + lightbox,
+Before/After compare slider, skill bars, articles with Read More, contact form
+with validation, toast notifications, dark/light mode, back-to-top.
+
+## Run locally
+Open `index.html` in a browser, or: `python3 -m http.server`
+
+## Deploy with GitHub Pages
+Settings → Pages → Deploy from branch → `main` → `/ (root)`.
+Live at: https://Arachocolates25.github.io/rayhan-new-website/
+
+## TODO — replace placeholders
+- Replace `YOUR-EMAIL@example.com` with your real email
+- Instagram / Facebook profile links in Contact
 
 Co-Founder of Ara Chocolates · Web Creator · Video Editor & Colour Grader
 
